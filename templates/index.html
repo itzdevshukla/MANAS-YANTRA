@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas-Yantra | The Gate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-scene"></div>
+    <div class="mist"></div>
+    
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <h1 class="nav-title">Manas-Yantra</h1>
+        <a href="/gyaan" class="enter-btn">
+            <span class="btn-text">प्राप्त ज्ञानम् <br><small>SEEK GYAAN</small></span>
+        </a>
+    </div>
+
+    <!-- Kaal Chakra Animation -->
+    <div class="kaal-chakra">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="rgba(212, 175, 55, 0.2)" stroke-width="1.5" fill="none">
+                <!-- Outer rings representing Time -->
+                <circle cx="100" cy="100" r="95" stroke-dasharray="2, 6" />
+                <circle cx="100" cy="100" r="88" stroke-width="3" />
+                <circle cx="100" cy="100" r="80" stroke-dasharray="15, 5" stroke-width="2"/>
+                <circle cx="100" cy="100" r="70" />
+                
+                <!-- The Spokes of Destiny -->
+                <path d="M 100 30 L 100 170 M 30 100 L 170 100 M 50.5 50.5 L 149.5 149.5 M 149.5 50.5 L 50.5 149.5" />
+                <path d="M 73.2 35.3 L 126.8 164.7 M 126.8 35.3 L 73.2 164.7 M 35.3 73.2 L 164.7 126.8 M 35.3 126.8 L 164.7 73.2" stroke-width="0.5" opacity="0.5" />
+
+                <!-- Inner Hub representing the Soul/Core -->
+                <circle cx="100" cy="100" r="20" fill="rgba(212, 175, 55, 0.05)" />
+                <circle cx="100" cy="100" r="12" stroke-width="2" stroke-dasharray="3, 3" />
+                <circle cx="100" cy="100" r="5" fill="rgba(212, 175, 55, 0.3)" />
+                
+                <!-- Mystic floating triangles forming a star -->
+                <polygon points="100,45 145,125 55,125" stroke="rgba(212, 175, 55, 0.1)" stroke-width="1"/>
+                <polygon points="100,155 55,75 145,75" stroke="rgba(212, 175, 55, 0.1)" stroke-width="1"/>
+            </g>
+        </svg>
+    </div>
+    
+    <!-- Ancient Sage Guardian -->
+    
+    <div class="particles" id="particles"></div>
+
+    <script>
+        const particlesContainer = document.getElementById('particles');
+        for(let i=0; i<60; i++) {
+            let p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.top = Math.random() * 100 + 'vh';
+            p.style.animationDuration = (Math.random() * 4 + 2) + 's';
+            p.style.animationDelay = Math.random() * 3 + 's';
+            particlesContainer.appendChild(p);
+        }
+    </script>
+</body>
+</html>

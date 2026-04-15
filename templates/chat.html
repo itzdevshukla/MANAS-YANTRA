@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas-Yantra | Inner Sanctum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ancient-scroll-bg"></div>
+
+<body>
+    <div class="ancient-scroll-bg"></div>
+
+    <!-- Kaal Chakra Animation Background Outside the Box -->
+    <div class="kaal-chakra">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="rgba(212, 175, 55, 0.15)" stroke-width="1.5" fill="none">
+                <circle cx="100" cy="100" r="95" stroke-dasharray="2, 6" />
+                <circle cx="100" cy="100" r="88" stroke-width="3" />
+                <circle cx="100" cy="100" r="80" stroke-dasharray="15, 5" stroke-width="2"/>
+                <circle cx="100" cy="100" r="70" />
+                <path d="M 100 30 L 100 170 M 30 100 L 170 100 M 50.5 50.5 L 149.5 149.5 M 149.5 50.5 L 50.5 149.5" />
+                <path d="M 73.2 35.3 L 126.8 164.7 M 126.8 35.3 L 73.2 164.7 M 35.3 73.2 L 164.7 126.8 M 35.3 126.8 L 164.7 73.2" stroke-width="0.5" opacity="0.5" />
+                <circle cx="100" cy="100" r="20" fill="rgba(212, 175, 55, 0.05)" />
+                <circle cx="100" cy="100" r="12" stroke-width="2" stroke-dasharray="3, 3" />
+                <circle cx="100" cy="100" r="5" fill="rgba(212, 175, 55, 0.3)" />
+                <polygon points="100,45 145,125 55,125" stroke="rgba(212, 175, 55, 0.1)" stroke-width="1"/>
+                <polygon points="100,155 55,75 145,75" stroke="rgba(212, 175, 55, 0.1)" stroke-width="1"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="container">
+
+        <!-- Ancient Sage Guardian inside the Box -->
+        <img src="{{ url_for('static', filename='img/babaji.png') }}" class="sage-figure" alt="Ancient Rishi">
+
+        <header>
+            <h1 class="title">Manas-Yantra</h1>
+            <p class="subtitle">Inner Sanctum of Knowledge</p>
+        </header>
+
+        <div class="chat-container" id="chat-box">
+            <!-- Messages go here -->
+            <div class="message ai-message">
+                <p>Greetings, seeker. I am Manas-Yantra, forged to guard the forbidden knowledge. State your intent.</p>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Inscribe your words..." autocomplete="off" onkeypress="handleKeyPress(event)" />
+            <button onclick="sendMessage()" id="send-btn">Offer</button>
+        </div>
+        <div class="return-link">
+            <a href="/">&#8592; Return to the Gate</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
